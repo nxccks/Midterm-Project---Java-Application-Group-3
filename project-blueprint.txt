@@ -1,0 +1,32 @@
+1️⃣ Proposed Real-Life Scenario
+
+✈️ Automated Airline Ticket Booking & Dynamic Seat Reservation Engine
+
+• Control Flow Applications:
+
+• Conditional (if / else if / else):
+• Baggage Allowance & Fee Assessment: if (ticketClass == "FIRST" || isEliteFrequentFlyer) permits up to 2 checked bags free; else if (ticketClass == "BUSINESS") permits 1 free bag; else charges standard per-kilogram excess luggage rate.
+• Seat Availability & Hold Check: if (selectedSeat.isAvailable && !selectedSeat.isHeld) locks seat for 10 minutes; else prompts "Seat no longer available" and suggests alternative aisles.
+• Cancellation Refund Eligibility: if (hoursBeforeFlight >= 48 && isRefundableFare) issues 100% refund; else if (hoursBeforeFlight >= 24) issues 50% travel voucher; else flags ticket as non-refundable.
+
+• Switch (switch-case):
+• Frequent Flyer Tier Multiplier: Assigns reward point multipliers based on customer membership status:
+• case "PLATINUM": Applies 3.0× bonus mile multiplier and lounge pass.
+• case "GOLD": Applies 2.0× bonus mile multiplier and priority boarding.
+• case "SILVER": Applies 1.5× bonus mile multiplier.
+• default: Awards standard 1.0× base miles.
+
+• Loops (while / for):
+• Multi-Leg Itinerary Cost Evaluator (for flightLeg in tripItinerary): Iterates across connecting flights to calculate base fares, local airport taxes, fuel surcharges, and total flight duration.
+• Expired Reservation Seat Releaser (while (hasExpiredHeldSeats)): Periodically loops through temporarily reserved seats whose checkout timers lapsed, releasing them back to the public inventory pool.
+
+2️⃣ System Description & Key Features
+
+📋 Overview
+A 100% cloud-based airline reservation and inventory management platform that automates multi-passenger bookings, seat mapping, loyalty reward calculations, and dynamic fare rules.
+
+✨ Key Features
+• Tier-Based Rule Engine: Uses conditional checks to enforce refund policies, baggage limits, and promotional rate qualifications.
+• Loyalty Tier Dispatcher: Uses switch-case logic to award reward points, lounge access, and boarding privileges based on membership tier.
+• Itinerary Aggregate Processor: Iterates through connected travel legs using loops to tally flight costs, taxes, and layover times.
+• Pure Software Backend: Operates entirely through web APIs, relational databases, and mobile booking interfaces without any physical hardware sensors.
